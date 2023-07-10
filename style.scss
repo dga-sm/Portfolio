@@ -1,0 +1,56 @@
+@forward 'globals';
+@use 'globals/typography' as a;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//start of header
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+
+    .logo{
+        display: flex;
+
+        img {
+            width: 3rem;
+            border-radius: 10%;
+        }
+
+        p{
+            align-self: center;
+            font-family: var(--font-logo);
+            font-size: 1.8rem;
+            margin-left: .5rem;
+        }
+    }
+
+    nav{
+        align-self: center;
+    }
+
+    .icons{
+        align-self: center;
+    }
+}
+
+.breadcrumb{
+
+    &__list{
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+    }
+
+    &__link{
+        text-decoration: none;
+        font-family: var(--font-primary);
+        font-weight: map-get(a.$font-primary-weight, semi-bold);
+        font-size: 1.2rem;
+        color: #000;
+    }
+
+}

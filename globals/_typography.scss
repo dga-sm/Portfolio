@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600&family=Righteous&display=swap');
+
+
+:root{
+    --font-logo: 'Righteous', cursive;
+    --font-primary: 'Blinker', sans-serif;
+}
+
+$font-primary-weight:(
+    "light":300,
+    "regular":400,
+    "semi-bold":600
+)
