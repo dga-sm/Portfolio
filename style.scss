@@ -1,5 +1,7 @@
-@forward 'globals';
-@use 'globals/typography' as a;
+@use 'globals/typography' as t;
+@use 'globals/colors' as c;
+@use 'globals/animations' as a;
+@use 'globals/breakpoints' as b;
 
 * {
     margin: 0;
@@ -10,7 +12,11 @@
 header{
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
+    padding: 1rem 8rem;
+    top: 0;
+    position: sticky;
+    background-color: #0b0230;
+    transition: background-color 0.3s ease;
 
     .logo{
         display: flex;
@@ -18,39 +24,70 @@ header{
         img {
             width: 3rem;
             border-radius: 10%;
+            border: 1px solid #fff;
         }
-
         p{
             align-self: center;
             font-family: var(--font-logo);
             font-size: 1.8rem;
             margin-left: .5rem;
+            color: #fff;
+        }
+        span{
+            display: inline-block;
+            color: var(--color-primary);
+            @include a.rotateAnim;
         }
     }
 
-    nav{
+    .breadcrumb{
         align-self: center;
+
+        .fa-bars{
+            color: #fff;
+            font-size: 2rem;
+            display: none;
+        }
+    
+        &__list{
+            display: flex;
+            list-style-type: none;
+            gap: 2rem;
+        }
+    
+        &__link{
+            text-decoration: none;
+            font-family: var(--font-primary);
+            font-weight: map-get(t.$font-primary-weight, semi-bold);
+            font-size: 1.2rem;
+            color: #fff;
+            @include a.transition(.2s);
+
+            &:hover{
+                color: var(--color-primary) !important;
+            }
+        }
+    
     }
 
     .icons{
         align-self: center;
+
+        i {
+            color: #fff;
+            font-size: 2rem;
+            width: 2.5rem;
+            @include a.transition(.2s);
+
+            &:hover{
+                color: var(--color-primary) !important;
+                cursor: pointer;
+            }
+        }
     }
 }
 
-.breadcrumb{
-
-    &__list{
-        display: flex;
-        list-style-type: none;
-        gap: 2rem;
-    }
-
-    &__link{
-        text-decoration: none;
-        font-family: var(--font-primary);
-        font-weight: map-get(a.$font-primary-weight, semi-bold);
-        font-size: 1.2rem;
-        color: #000;
-    }
-
+main{
+    background-color: #0b0230;
+    height: 200vh;
 }

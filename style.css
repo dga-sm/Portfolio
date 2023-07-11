@@ -4,6 +4,15 @@
   --font-primary: "Blinker", sans-serif;
 }
 
+:root {
+  --color-primary: #00d1d8;
+}
+
+@keyframes mymove {
+  50% {
+    transform: rotateY(190deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +21,11 @@
 header {
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
+  padding: 1rem 8rem;
+  top: 0;
+  position: sticky;
+  background-color: #0b0230;
+  transition: background-color 0.3s ease;
 }
 header .logo {
   display: flex;
@@ -20,29 +33,61 @@ header .logo {
 header .logo img {
   width: 3rem;
   border-radius: 10%;
+  border: 1px solid #fff;
 }
 header .logo p {
   align-self: center;
   font-family: var(--font-logo);
   font-size: 1.8rem;
   margin-left: 0.5rem;
+  color: #fff;
 }
-header nav {
+header .logo span {
+  display: inline-block;
+  color: var(--color-primary);
+  animation: mymove 5s infinite;
+}
+header .breadcrumb {
   align-self: center;
 }
-header .icons {
-  align-self: center;
+header .breadcrumb .fa-bars {
+  color: #fff;
+  font-size: 2rem;
+  display: none;
 }
-
-.breadcrumb__list {
+header .breadcrumb__list {
   display: flex;
   list-style-type: none;
   gap: 2rem;
 }
-.breadcrumb__link {
+header .breadcrumb__link {
   text-decoration: none;
   font-family: var(--font-primary);
   font-weight: 600;
   font-size: 1.2rem;
-  color: #000;
+  color: #fff;
+  transition: ease-in-out;
+  transition-duration: 0.2s;
+}
+header .breadcrumb__link:hover {
+  color: var(--color-primary) !important;
+}
+header .icons {
+  align-self: center;
+}
+header .icons i {
+  color: #fff;
+  font-size: 2rem;
+  width: 2.5rem;
+  transition: ease-in-out;
+  transition-duration: 0.2s;
+}
+header .icons i:hover {
+  color: var(--color-primary) !important;
+  cursor: pointer;
+}
+
+main {
+  background-color: #0b0230;
+  height: 200vh;
 }/*# sourceMappingURL=style.css.map */
