@@ -25,7 +25,7 @@ header {
   top: 0;
   position: sticky;
   background-color: #0b0230;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 header .logo {
   display: flex;
@@ -66,6 +66,25 @@ header .hamburger-menu .menu__icons i {
 header .hamburger-menu .menu__icons i:hover {
   color: var(--color-primary) !important;
   cursor: pointer;
+}
+header .hamburger-menu .menu__icons i:hover .email {
+  display: inline-block;
+  color: #000;
+}
+header .hamburger-menu .menu__icons i .email {
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  position: absolute;
+  margin: 3rem 0 0 -3.3rem;
+  display: none;
+}
+header .hamburger-menu .menu__icons i .copyText {
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  position: absolute;
+  margin: -1.5rem 0 0 -1rem;
+  display: none;
+  color: #000;
 }
 header .breadcrumb {
   align-self: center;
@@ -124,4 +143,17 @@ header .icons i:hover {
 main {
   background-color: #0b0230;
   height: 200vh;
+}
+
+@media (min-width: 1025px) {
+  html {
+    background-color: #0b0230;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  header {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */
