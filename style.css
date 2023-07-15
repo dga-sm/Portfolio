@@ -140,11 +140,6 @@ header .icons i:hover {
   }
 }
 
-main {
-  background-color: #0b0230;
-  height: 200vh;
-}
-
 @media (min-width: 1025px) {
   html {
     background-color: #0b0230;
@@ -156,4 +151,22 @@ main {
     max-width: 1240px;
     margin: 0 auto;
   }
+}
+main {
+  background-color: #0b0230;
+  height: 200vh;
+}
+
+.banner {
+  display: flex;
+  padding: 1rem 8rem;
+}
+.banner__text {
+  width: 45%;
+}
+.banner__img {
+  width: 55%;
+}
+.banner__img img {
+  width: 37rem;
 }/*# sourceMappingURL=style.css.map */
