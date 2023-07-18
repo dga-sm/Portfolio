@@ -26,6 +26,7 @@ header {
   position: sticky;
   background-color: #0b0230;
   transition: background-color 0.5s ease;
+  z-index: 1;
 }
 header .logo {
   display: flex;
@@ -126,9 +127,6 @@ header .icons i:hover {
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  header {
-    padding: 1rem 2rem;
-  }
   header .hamburger-menu {
     display: inline-block;
   }
@@ -140,6 +138,80 @@ header .icons i:hover {
   }
 }
 
+main {
+  background-color: #0b0230;
+  height: 200vh;
+}
+main .banner {
+  display: flex;
+  padding: 4rem 8rem;
+}
+main .banner__text {
+  width: 45%;
+  align-self: center;
+  margin-top: -3.5rem;
+}
+main .banner__text h3 {
+  font-family: var(--font-primary);
+  color: #fff;
+  font-size: 2.5rem;
+}
+main .banner__text h2 {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-size: 4.4rem;
+  line-height: 3.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+main .banner__text button {
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+main .banner__img {
+  width: 55%;
+  text-align: right;
+}
+main .banner__img img {
+  width: 34em;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  main .banner {
+    padding: 4rem 2rem;
+    flex-flow: column;
+  }
+  main .banner__text {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+  main .banner__img {
+    width: 100%;
+    text-align: center;
+  }
+  main .banner__img img {
+    width: 35rem;
+  }
+}
+@media (max-width: 480px) {
+  main .banner {
+    margin-top: 0;
+    padding: 3rem 0;
+  }
+  main .banner__img img {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 2rem;
+  }
+  main {
+    padding: 1rem 2rem;
+  }
+}
 @media (min-width: 1025px) {
   html {
     background-color: #0b0230;
@@ -148,25 +220,11 @@ header .icons i:hover {
     align-self: center;
   }
   header {
-    max-width: 1240px;
+    max-width: 1440px;
     margin: 0 auto;
   }
-}
-main {
-  background-color: #0b0230;
-  height: 200vh;
-}
-
-.banner {
-  display: flex;
-  padding: 1rem 8rem;
-}
-.banner__text {
-  width: 45%;
-}
-.banner__img {
-  width: 55%;
-}
-.banner__img img {
-  width: 37rem;
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */
