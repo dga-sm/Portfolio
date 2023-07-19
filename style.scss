@@ -151,13 +151,12 @@ header{
 //start of main
 main{
     background-color: #0b0230;
-    height: 200vh;
+    padding: 4rem 8rem;
 
     //start of banner
     .banner{
         display: flex;
-        padding: 4rem 8rem;
-
+        padding-top: 2rem;
 
         &__text{
             width: 45%;
@@ -189,6 +188,24 @@ main{
             img{
                 width: 34em;
                 border-radius: 5px;
+            }
+        }
+    }
+
+    @include b.breakpoint(large){
+
+        .banner{
+            padding: 4rem 1rem;
+            
+            &__text{
+                margin-top: 1rem;
+            }
+
+            &__img{
+
+                img{
+                    width: 28rem;
+                }
             }
         }
     }
@@ -227,8 +244,69 @@ main{
             }
         }
     }
-//end of banner
+    //end of banner
+    //start of skills section
+    .skills{
+        margin-top: 8rem;
+        text-align: center;
 
+        h1{
+            color: #fff;
+            font-family: var(--font-primary);
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &__item{
+            width: 16%;
+            
+            &:hover{
+                .skill__label{
+                    opacity: 1;
+                    transform: translateY(-3rem);
+                }
+                .icc{
+                    filter: blur(5px);
+                }
+            }
+        }
+
+        &__container{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+
+
+            .skill__label{
+                color: #fff;
+                font-family: var(--font-primary);
+                font-size: 1.3rem;
+                font-weight: map-get(t.$font-primary-weight , semi-bold);
+                letter-spacing: .1rem;
+
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+            }
+
+            i{
+                font-size: 5rem;
+                color: var(--color-primary);
+                @include a.transition(.2s);
+            }
+        }
+    }
+    @include b.breakpoint(medium){
+        .skills__item{
+            width: 33%;
+            margin-bottom: 1.5rem;
+        }
+    }
+    @include b.breakpoint(small){
+        .skills__item{
+            width: 50%;
+        }
+    }
 
 }
 //end of main
@@ -237,7 +315,14 @@ main{
 
 
 
-
+@media(max-width: map-get(b.$breakpoints, large)){
+    header{
+        padding: 2rem 4rem;
+    }
+    main{
+        padding: 2rem 4rem;
+    }
+}
 
 @media(max-width: map-get(b.$breakpoints, medium)){
     header{

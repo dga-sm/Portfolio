@@ -140,11 +140,11 @@ header .icons i:hover {
 
 main {
   background-color: #0b0230;
-  height: 200vh;
+  padding: 4rem 8rem;
 }
 main .banner {
   display: flex;
-  padding: 4rem 8rem;
+  padding-top: 2rem;
 }
 main .banner__text {
   width: 45%;
@@ -176,6 +176,17 @@ main .banner__img img {
   width: 34em;
   border-radius: 5px;
 }
+@media (max-width: 1024px) {
+  main .banner {
+    padding: 4rem 1rem;
+  }
+  main .banner__text {
+    margin-top: 1rem;
+  }
+  main .banner__img img {
+    width: 28rem;
+  }
+}
 @media (max-width: 768px) {
   main .banner {
     padding: 4rem 2rem;
@@ -203,7 +214,67 @@ main .banner__img img {
     width: 20rem;
   }
 }
+main .skills {
+  margin-top: 8rem;
+  text-align: center;
+}
+main .skills h1 {
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+main .skills__item {
+  width: 16%;
+}
+main .skills__item:hover .skill__label {
+  opacity: 1;
+  transform: translateY(-3rem);
+}
+main .skills__item:hover .icc {
+  filter: blur(5px);
+}
+main .skills__container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .skills__container .skill__label {
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+main .skills__container i {
+  font-size: 5rem;
+  color: var(--color-primary);
+  transition: ease-in-out;
+  transition-duration: 0.2s;
+}
+@media (max-width: 768px) {
+  main .skills__item {
+    width: 33%;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  main .skills__item {
+    width: 50%;
+  }
+}
 
+@media (max-width: 1024px) {
+  header {
+    padding: 2rem 4rem;
+  }
+  main {
+    padding: 2rem 4rem;
+  }
+}
 @media (max-width: 768px) {
   header {
     padding: 1rem 2rem;
