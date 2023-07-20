@@ -266,6 +266,46 @@ main .skills__container i {
     width: 50%;
   }
 }
+main .projects {
+  margin-top: 5rem;
+}
+main .projects h1 {
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+main .projects .project__text {
+  width: 45%;
+}
+main .projects .project__text h2 {
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+main .projects .project__text > p {
+  color: #eeeeee;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+main .projects .project__text .tech-used {
+  display: flex;
+  margin-top: 1rem;
+}
+main .projects .project__text .tech-used p {
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  background-color: #200c74;
+  font-weight: 400;
+  margin-right: 1rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+}
 
 @media (max-width: 1024px) {
   header {

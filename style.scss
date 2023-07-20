@@ -307,6 +307,55 @@ main{
             width: 50%;
         }
     }
+    //end of skills section
+    //start of projects section
+    .projects{
+        margin-top: 5rem;
+
+        h1{
+            color: #fff;
+            font-family: var(--font-primary);
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .project{
+
+            &__text{
+                width: 45%;
+
+                h2{
+                    color: #fff;
+                    font-family: var(--font-primary);
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+                > p{
+                    color: #eeeeee;
+                    font-family: var(--font-primary);
+                    font-size: 1.2rem;
+                    font-weight: map-get(t.$font-primary-weight, light );
+                    line-height: 1.8rem;
+                }
+                .tech-used{
+                    display: flex;
+                    margin-top: 1rem;
+
+                    p{
+                        color: #fff;
+                        font-family: var(--font-primary);
+                        font-size: 1.2rem;
+                        background-color: #200c74;
+                        font-weight: map-get(t.$font-primary-weight, regular );
+                        margin-right: 1rem;
+                        padding: .3rem .8rem;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+    }
 
 }
 //end of main
