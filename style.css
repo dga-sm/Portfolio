@@ -276,8 +276,12 @@ main .projects h1 {
   margin-bottom: 3rem;
   text-align: center;
 }
+main .projects .project {
+  display: flex;
+}
 main .projects .project__text {
   width: 45%;
+  padding-top: 2rem;
 }
 main .projects .project__text h2 {
   color: #fff;
@@ -305,6 +309,39 @@ main .projects .project__text .tech-used p {
   margin-right: 1rem;
   padding: 0.3rem 0.8rem;
   border-radius: 3px;
+}
+main .projects .project__img {
+  width: 55%;
+}
+@media (max-width: 768px) {
+  main .projects .project {
+    display: block;
+  }
+  main .projects .project .project__text {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  main .projects .project .project__img {
+    width: 100%;
+  }
+  main .projects .project .project__img .container .button a {
+    margin: -10rem 0.5rem -10rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  main .projects .project {
+    display: block;
+  }
+  main .projects .project .project__text {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  main .projects .project .project__img {
+    width: 100%;
+  }
+  main .projects .project .project__img .container .button a {
+    margin: -6.5rem 0 -6.5rem 0.5rem;
+  }
 }
 
 @media (max-width: 1024px) {
