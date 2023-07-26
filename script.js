@@ -43,3 +43,14 @@ function copyEmail() {
 
 }
 
+
+$(document).ready(function(){
+    $("#image-slider").owlCarousel({
+      items: 1, // Number of items shown at a time
+      loop: true, // Infinite loop
+      autoplayHoverPause: true, // Pause on hover
+      nav: true, // Show navigation arrows
+      dots: true, // Show navigation dots
+    });
+  });
+

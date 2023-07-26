@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/others/burgerMenu.css">
     <link rel="stylesheet" href="/others/cvBtn.css">
-    <link rel="stylesheet" href="/others/img slider/s.css">
+    <link rel="stylesheet" href="/others/s.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://kit.fontawesome.com/e1d40d0082.js" defer crossorigin="anonymous"></script>
 
 </head>
@@ -103,58 +105,42 @@
         <!-- start of projects section -->
         <section class="projects">
             <h1>Projects</h1>
+
             <div class="project">
                 <div class="project__text">
                     <h2>Cyber Space Clone</h1>
-                    <p>Cyber Space is a sample website for a cyber security company. It consist of different services, information and contact details about the company. This is only a clone of a website from templatemonster.com</p>
+                    <p>Cyber Space is a sample website for a cyber security company. It consist of different services, information and contact details about the company. This is only a clone of a website template from templatemonster.com</p>
                     <div class="tech-used">
                         <p>Wordpress</p>
                         <p>Elementor</p>
                     </div>
                 </div>
                 <div class="project__img">
-                    
-                    <div class="container">
-                        <div class="image">
-                            <img src="Assets/Cyber Space/ss-1.png" alt="">
-                        </div>
-                        <div class="image">
-                            <img src="Assets/Cyber Space/ss-2.png" alt="">
-                        </div>
-                        <div class="image">
-                            <img src="Assets/Cyber Space/ss-3.png" alt="">
-                        </div>
-                        <div class="image">
-                            <img src="Assets/Cyber Space/ss-4.png" alt="">
-                        </div>
-                        <div class="image">
-                            <img src="Assets/Cyber Space/ss-5.png" alt="">
-                        </div>
-                
-                        <div class="button">
-                            <a onclick="nextimg(-1)" class="prev">&#10094;</a>
-                            <a onclick="nextimg(1)" class="next">&#10095;</a>
-                        </div>
-                
-                        <div class="dots">
-                            <span class="dot active" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                            <span class="dot" onclick="currentSlide(4)"></span>
-                            <span class="dot" onclick="currentSlide(5)"></span>
-                        </div>
+                    <!--  -->
+                    <div class="owl-carousel owl-theme" id="image-slider">
+                        <div class="item"><img src="/Assets/Cyber Space/ss-1.png" alt="Image 1"></div>
+                        <div class="item"><img src="/Assets/Cyber Space/ss-2.png" alt="Image 2"></div>
+                        <div class="item"><img src="/Assets/Cyber Space/ss-3.png" alt="Image 3"></div>
+                        <div class="item"><img src="/Assets/Cyber Space/ss-4.png" alt="Image 2"></div>
+                        <div class="item"><img src="/Assets/Cyber Space/ss-5.png" alt="Image 3"></div>
+                        <!-- Add more slides as needed -->
                     </div>
-
+                    <!--  -->
                 </div>
             </div> 
+
         </section>
         <!-- end of project section -->
     </main>
     <!-- end of main -->
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
-    <script src="/others/img slider/s.js"></script>
+    
 </body>
 </html>

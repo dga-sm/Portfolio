@@ -3,6 +3,12 @@
 @use 'globals/animations' as a;
 @use 'globals/breakpoints' as b;
 
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
 
 * {
     margin: 0;
@@ -99,7 +105,6 @@ header{
             display: flex;
             list-style-type: none;
             gap: 2rem;
-
         }
     
         &__link{
@@ -124,6 +129,7 @@ header{
             font-size: 2rem;
             width: 2.5rem;
             @include a.transition(.2s);
+            margin-top: -1rem;
 
             &:hover{
                 color: var(--color-primary) !important;
@@ -358,8 +364,69 @@ main{
             }
 
             &__img{
-                width: 55%;
+                width: 50%;
+                padding-left: 2rem;
 
+                .item{
+                    border: 5px solid var(--color-primary);
+                    border-radius: 10px;
+
+                    img{
+                        border-radius: 5px;
+                    }
+                }
+                .owl-nav{
+                    width: 35%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: -1rem auto 0;
+                    
+                    .owl-next{
+                        
+                        &:hover{
+                            background-color: transparent;
+                        }
+
+                        span{
+                            font-size: 3rem;
+                            color: var(--color-primary);
+                            font-weight: 900;
+
+                            &:hover{
+                                color: #fff;
+                                @include a.transition(.2s);
+                            }
+                        }
+                    }
+
+                    .owl-prev{
+                        
+                        &:hover{
+                            background-color: transparent;
+                        }
+
+                        span{
+                            font-size: 3rem;
+                            color: var(--color-primary);
+                            font-weight: 900;
+
+                            &:hover{
+                                color: #fff;
+                                @include a.transition(.2s);
+                            }
+                        }
+                    }
+                }
+                
+                .owl-dots{
+                    margin-top: -2.2rem;
+
+                    .owl-dot.active span{
+                        transform: scale(1.3);
+                        background-color: var(--color-primary);
+                    }
+                }
+                
             }
 
             @include b.breakpoint(medium){
@@ -372,9 +439,6 @@ main{
                 .project__img{
                     width: 100%;
 
-                    .container .button a{
-                        margin: -10rem .5rem -10rem 1rem;
-                    }
                 }
             }
 
@@ -388,9 +452,9 @@ main{
                 .project__img{
                     width: 100%;
 
-                    .container .button a{
-                        margin: -6.5rem 0 -6.5rem .5rem;
-                    }
+                    // .container .button a{
+                    //     margin: -6.5rem 0 -6.5rem .5rem;
+                    // }
                 }
             }
         }
