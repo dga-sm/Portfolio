@@ -33,6 +33,9 @@ function copyEmail() {
   var disappearingText = document.querySelector(".copyText");
   disappearingText.style.display = "inline-block";
 
+  var disappearingText2 = document.querySelector(".copyText-2");
+  disappearingText2.style.display = "inline-block";
+
   // Define the duration in milliseconds after which the text will disappear
   var duration = 3000; // 3000 milliseconds = 3 seconds
 
@@ -44,8 +47,21 @@ function copyEmail() {
 }
 
 
+
+
+//image sliders
 $(document).ready(function(){
     $("#image-slider").owlCarousel({
+      items: 1, // Number of items shown at a time
+      loop: true, // Infinite loop
+      autoplayHoverPause: true, // Pause on hover
+      nav: true, // Show navigation arrows
+      dots: true, // Show navigation dots
+    });
+  });
+
+  $(document).ready(function(){
+    $("#image-slider-2").owlCarousel({
       items: 1, // Number of items shown at a time
       loop: true, // Infinite loop
       autoplayHoverPause: true, // Pause on hover

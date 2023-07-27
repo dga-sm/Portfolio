@@ -3,12 +3,6 @@
 @use 'globals/animations' as a;
 @use 'globals/breakpoints' as b;
 
-// Required Core Stylesheet
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
-// Optional Theme Stylesheet
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
-
 
 * {
     margin: 0;
@@ -24,7 +18,7 @@ header{
     position: sticky;
     background-color: #0b0230;
     transition: background-color .5s ease;
-    z-index: 1;
+    z-index: 10;
 
     .logo{
         display: flex;
@@ -328,6 +322,7 @@ main{
 
         .project{
             display: flex;
+            margin-bottom: 4rem;
 
             &__text{
                 width: 45%;
@@ -361,15 +356,43 @@ main{
                         border-radius: 3px;
                     }
                 }
+                div {
+                    margin-top: 2rem;
+
+                    a {
+                        font-family: var(--font-primary);
+                        color: #fff;
+                        background-color: transparent;
+                        border: 2px solid #fff;
+                        padding: .5rem 1rem;
+                        font-size: 1.1rem;
+                        margin-top: 2rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-weight: map-get(t.$font-primary-weight,semi-bold);
+                        letter-spacing: .1rem;
+                        text-decoration: none;
+                        @include a.transition(.3s);
+    
+                        &:hover{
+                            background-color: #fff;
+                            color: #000;
+                            @include a.transition(.2s);
+                        }
+                    }
+                }
             }
 
             &__img{
                 width: 50%;
                 padding-left: 2rem;
+                margin-top: 1rem;
+                z-index: 0;
 
                 .item{
                     border: 5px solid var(--color-primary);
                     border-radius: 10px;
+
 
                     img{
                         border-radius: 5px;
@@ -438,7 +461,7 @@ main{
                 }
                 .project__img{
                     width: 100%;
-
+                    padding-left: 0;
                 }
             }
 
@@ -451,10 +474,9 @@ main{
                 }
                 .project__img{
                     width: 100%;
-
-                    // .container .button a{
-                    //     margin: -6.5rem 0 -6.5rem .5rem;
-                    // }
+                }
+                .owl-nav{
+                    width: 60%;
                 }
             }
         }
@@ -464,7 +486,49 @@ main{
 
 }
 //end of main
+// start of footer
+footer{
+    padding: 2rem 8rem;
+    background-color: #0b0230;
 
+    .menu__icons-2{
+        width: 100%;
+        text-align: center;
+
+        i {
+            color: #fff;
+            font-size: 2rem;
+            width: 2.5rem;
+            @include a.transition(.2s);
+
+            &:hover{
+                color: var(--color-primary) !important;
+                cursor: pointer;
+
+                .email{
+                    display: inline-block;
+                }
+            }
+
+            .email{
+                font-size: 1rem;
+                font-family: var(--font-primary);
+                position: absolute;
+                margin-left: -15rem;
+                color: #fff;
+                display: none;
+            }
+            .copyText-2{
+                font-size: 1rem;
+                font-family: var(--font-primary);
+                position: absolute;
+                margin: -1.5rem 0 0 -1rem;
+                color: #fff;
+                display: none;
+            }
+        }
+    }
+}
 
 
 
@@ -476,6 +540,9 @@ main{
     main{
         padding: 2rem 4rem;
     }
+    footer{
+        padding: 2rem 4rem;
+    }
 }
 
 @media(max-width: map-get(b.$breakpoints, medium)){
@@ -483,6 +550,9 @@ main{
         padding: 1rem 2rem;
     }
     main{
+        padding: 1rem 2rem;
+    }
+    footer{
         padding: 1rem 2rem;
     }
 }
@@ -499,6 +569,10 @@ main{
         margin: 0 auto;
     }
     body{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    footer{
         max-width: 1440px;
         margin: 0 auto;
     }
