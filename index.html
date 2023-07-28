@@ -27,30 +27,30 @@
             </label>
         
             <ul class="menu__box">
-                <li><a class="menu__item" href="#">Home</a></li>
-                <li><a class="menu__item" href="#">About</a></li>
-                <li><a class="menu__item" href="#">Projects</a></li>
-                <li><a class="menu__item" href="#">Contact</a></li>
+                <li><a class="menu__item" onclick="scrollToID('banner', -100)">Home</a></li>
+                <li><a class="menu__item" onclick="scrollToID('skills', -100)">About</a></li>
+                <li><a class="menu__item" onclick="scrollToID('projects', -100)">Projects</a></li>
+                <li><a class="menu__item" onclick="scrollToID('contact', -100)">Contact</a></li>
                 <div class="menu__icons">
                     <i class="fa-solid fa-envelope" onclick="copyEmail()"><span class="copyText">Copied to Clipboard</span><span class="email">stamariadennis6@gmail.com</span></i>
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://github.com/dga-sm?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a></i>
+                    <a href="https://www.linkedin.com/in/stamariadennis" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/dennis.stamaria.39" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 </div>
             </ul>
           </div>
         <!-- burger menu - end -->
         <nav class="breadcrumb">
             <ul class="breadcrumb__list">
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="">Home</a></li>
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="">About</a></li>
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="">Projects</a></li>
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="">Contact</a></li>
+                <li class="breadcrumb__item"><a class="breadcrumb__link" onclick="scrollToID('banner', -100)">Home</a></li>
+                <li class="breadcrumb__item"><a class="breadcrumb__link" onclick="scrollToID('skills', -100)">About</a></li>
+                <li class="breadcrumb__item"><a class="breadcrumb__link" onclick="scrollToID('projects', -100)">Projects</a></li>
+                <li class="breadcrumb__item"><a class="breadcrumb__link" onclick="scrollToID('contact', -100)">Contact</a></li>
             </ul>
         </nav>
         <div class="icons">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://github.com/dga-sm?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a></i>
+            <a href="https://www.linkedin.com/in/stamariadennis" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </header>
     <!-- end of header -->
@@ -58,7 +58,7 @@
     <!-- start of main -->
     <main>
         <!-- start of banner -->
-        <section class="banner">
+        <section class="banner" id="banner">
             <div class="banner__text">
                 <h3>Hi, I'm Dennis!</h3>
                 <h2>Front-End Web Developer</h2>
@@ -72,7 +72,7 @@
         </section>
         <!-- end of banner -->
         <!-- start of skills section -->
-        <section class="skills">
+        <section class="skills" id="skills">
             <h1>Skills</h1>
             <div class="skills__container">
                 <div class="skills__item">
@@ -103,7 +103,7 @@
         </section>
         <!-- end of skills section -->
         <!-- start of projects section -->
-        <section class="projects">
+        <section class="projects" id="projects">
             <h1>Projects</h1>
 
             <div class="project">
@@ -114,7 +114,7 @@
                         <p>Wordpress</p>
                         <p>Elementor</p>
                     </div>
-                    <div><a href="http://www.google.com" target="_blank">Live Demo</a></div>
+                    <div><a href="http://www.clonecyber.free.nf" target="_blank">Live Demo</a></div>
                 </div>
                 <div class="project__img">
                     <div class="owl-carousel owl-theme" id="image-slider">
@@ -136,7 +136,7 @@
                         <p>Wordpress</p>
                         <p>Oxygen Builder</p>
                     </div>
-                    <div><a href="http://www.google.com" target="_blank">Live Demo</a></div>
+                    <div><a href="http://www.clonecafeteria.free.nf" target="_blank">Live Demo</a></div>
                 </div>
                 <div class="project__img">
                     <div class="owl-carousel owl-theme" id="image-slider-2">
@@ -156,11 +156,11 @@
     <!-- start of footer -->
     <hr>
     <footer>
-        <div class="menu__icons-2">
+        <div class="menu__icons-2" id="contact">
             <i class="fa-solid fa-envelope" onclick="copyEmail()"><span class="copyText-2">Copied to Clipboard</span><span class="email">stamariadennis6@gmail.com</span></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-facebook"></i>
+            <a href="https://github.com/dga-sm?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a></i>
+            <a href="https://www.linkedin.com/in/stamariadennis" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/dennis.stamaria.39" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
 

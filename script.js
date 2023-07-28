@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-//scroll effect
+//scroll effect to header
 const timeline = gsap.timeline({scrollTrigger: {
     trigger: 'header',
     start: 'top top', 
@@ -11,6 +11,18 @@ timeline.to(header, {backgroundColor: '#fff'})
 timeline.to('.breadcrumb__link', {color: '#000'})
 timeline.to('.logo p', {color: '#000'})
 timeline.to('.icons i', {color: '#000'})
+
+
+const timeline2 = gsap.timeline({defaults:{duration:1}})
+timeline2
+  .from('.logo img', {opacity: 0, stagger: .2 })
+  .from('.logo p', {opacity: 0, stagger: .2 })
+  .from('.hamburger-menu', {opacity: 0})
+  .from('.breadcrumb__item', {opacity: 0, stagger: .2 })
+  .from('.icons a', {opacity: 0, stagger: .2 })
+  .from('.banner__text', {x: '-120%'})
+  .from('.banner__img', {opacity: 0})
+
 
 
 //email copy to clipboard
@@ -70,3 +82,14 @@ $(document).ready(function(){
     });
   });
 
+
+
+//goes to specific section
+  function scrollToID(id, offset) {
+    var targetElement = document.getElementById(id);
+    if (targetElement) {
+        var targetPosition = targetElement.getBoundingClientRect().top;
+        var offsetPosition = targetPosition + window.scrollY + offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+}

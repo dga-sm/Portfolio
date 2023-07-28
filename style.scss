@@ -108,6 +108,7 @@ header{
             font-size: 1.2rem;
             color: #fff;
             @include a.transition(.2s);
+            cursor: pointer;
 
             &:hover{
                 color: var(--color-primary) !important;
@@ -187,7 +188,8 @@ main{
             
             img{
                 width: 34em;
-                border-radius: 5px;
+                border-radius: 10px;
+                border: 5px solid var(--color-primary);
             }
         }
     }

@@ -108,6 +108,7 @@ header .breadcrumb__link {
   color: #fff;
   transition: ease-in-out;
   transition-duration: 0.2s;
+  cursor: pointer;
 }
 header .breadcrumb__link:hover {
   color: var(--color-primary) !important;
@@ -175,7 +176,8 @@ main .banner__img {
 }
 main .banner__img img {
   width: 34em;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 5px solid var(--color-primary);
 }
 @media (max-width: 1024px) {
   main .banner {
