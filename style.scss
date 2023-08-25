@@ -119,11 +119,15 @@ header{
     .icons{
         align-self: center;
 
+        ul{
+            display: flex;
+            list-style-type: none;
+        }
+
         i {
             color: #fff;
             font-size: 2rem;
             width: 2.5rem;
-            @include a.transition(.2s);
             margin-top: -1rem;
 
             &:hover{
@@ -158,6 +162,7 @@ main{
     .banner{
         display: flex;
         padding-top: 2rem;
+        
 
         &__text{
             width: 45%;
@@ -496,6 +501,13 @@ footer{
     .menu__icons-2{
         width: 100%;
         text-align: center;
+
+        ul{
+            display: flex;
+            list-style-type: none;
+            text-align: center;
+            justify-content: center;
+        }
 
         i {
             color: #fff;

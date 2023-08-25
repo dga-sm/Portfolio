@@ -1,29 +1,81 @@
 gsap.registerPlugin(ScrollTrigger);
 
 //scroll effect to header
-const timeline = gsap.timeline({scrollTrigger: {
-    trigger: 'header',
-    start: 'top top', 
-    end: 'bottom top', 
-    scrub: true,
-  }}) 
-timeline.to(header, {backgroundColor: '#fff'})
-timeline.to('.breadcrumb__link', {color: '#000'})
-timeline.to('.logo p', {color: '#000'})
-timeline.to('.icons i', {color: '#000'})
+// const timeline = gsap.timeline({scrollTrigger: {
+//     trigger: 'header',
+//     start: 'top top', 
+//     end: 'bottom top', 
+//     scrub: true,
+//   }}) 
+// timeline.to(header, {backgroundColor: '#fff'})
+// timeline.to('.breadcrumb__link', {color: '#000'})
+// timeline.to('.logo p', {color: '#000'})
+// timeline.to('.icons i', {color: '#000'})
 
 
-const timeline2 = gsap.timeline({defaults:{duration:1}})
-timeline2
-  .from('.logo img', {opacity: 0, stagger: .2 })
-  .from('.logo p', {opacity: 0, stagger: .2 })
-  .from('.hamburger-menu', {opacity: 0})
-  .from('.breadcrumb__item', {opacity: 0, stagger: .2 })
-  .from('.icons a', {opacity: 0, stagger: .2 })
-  .from('.banner__text', {x: '-120%'})
-  .from('.banner__img', {opacity: 0})
+// const timeline2 = gsap.timeline({defaults:{duration:1}})
+// timeline2
+//   .from('.logo img', {opacity: 0, stagger: .2 })
+//   .from('.logo p', {opacity: 0, stagger: .2 })
+//   .from('.hamburger-menu', {opacity: 0})
+//   .from('.breadcrumb__item', {opacity: 0, stagger: .2 })
+//   .from('.icons a', {opacity: 0, stagger: .2 })
+//   .from('.banner__text', {x: '-120%'})
+//   .from('.banner__img', {opacity: 0})
 
 
+const tl = gsap.timeline({})
+  tl.from(".logo img", {y: -200, duration: 1, opacity: 0})
+    .from(".logo p", {y: -200, duration: 1, opacity: 0})
+    .from(".breadcrumb__item", {y: -200, duration: 1, opacity: 0, stagger: .2})
+    .from(".icon", {y: -200, duration: 1, opacity: 0, stagger: .2})
+    .from(".banner__text", {x: -200, duration: 1, opacity: 0})
+    .from(".banner__img", {duration: 1, opacity: 0})
+
+gsap.from(".skills", {
+    x: -200,
+    duration: 1,
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".skills",
+      start: "top 60%",
+      markers: true
+    }
+})
+
+gsap.from(".projects h1", {
+  x: -200,
+  duration: 1,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".projects h1",
+    start: "top 60%",
+    markers: true
+  }
+})
+
+gsap.from(".project", {
+  x: -200,
+  duration: 1,
+  stagger: 1.5,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".project",
+    start: "top 60%",
+    markers: true
+  }
+})
+
+gsap.from(".icon-2", {
+  x: -200,
+  duration: 1,
+  stagger: .8,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".icon-2",
+    markers: true
+  }
+})
 
 //email copy to clipboard
 function copyEmail() {

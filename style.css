@@ -116,12 +116,14 @@ header .breadcrumb__link:hover {
 header .icons {
   align-self: center;
 }
+header .icons ul {
+  display: flex;
+  list-style-type: none;
+}
 header .icons i {
   color: #fff;
   font-size: 2rem;
   width: 2.5rem;
-  transition: ease-in-out;
-  transition-duration: 0.2s;
   margin-top: -1rem;
 }
 header .icons i:hover {
@@ -427,6 +429,12 @@ footer {
 footer .menu__icons-2 {
   width: 100%;
   text-align: center;
+}
+footer .menu__icons-2 ul {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  justify-content: center;
 }
 footer .menu__icons-2 i {
   color: #fff;
