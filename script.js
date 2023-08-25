@@ -1,29 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-
-//scroll effect to header
-// const timeline = gsap.timeline({scrollTrigger: {
-//     trigger: 'header',
-//     start: 'top top', 
-//     end: 'bottom top', 
-//     scrub: true,
-//   }}) 
-// timeline.to(header, {backgroundColor: '#fff'})
-// timeline.to('.breadcrumb__link', {color: '#000'})
-// timeline.to('.logo p', {color: '#000'})
-// timeline.to('.icons i', {color: '#000'})
-
-
-// const timeline2 = gsap.timeline({defaults:{duration:1}})
-// timeline2
-//   .from('.logo img', {opacity: 0, stagger: .2 })
-//   .from('.logo p', {opacity: 0, stagger: .2 })
-//   .from('.hamburger-menu', {opacity: 0})
-//   .from('.breadcrumb__item', {opacity: 0, stagger: .2 })
-//   .from('.icons a', {opacity: 0, stagger: .2 })
-//   .from('.banner__text', {x: '-120%'})
-//   .from('.banner__img', {opacity: 0})
-
-
+//header animation and scroll effects
 const tl = gsap.timeline({})
   tl.from(".logo img", {y: -200, duration: 1, opacity: 0})
     .from(".logo p", {y: -200, duration: 1, opacity: 0})
@@ -38,8 +14,7 @@ gsap.from(".skills", {
     opacity: 0,
     scrollTrigger: {
       trigger: ".skills",
-      start: "top 60%",
-      markers: true
+      start: "top 60%"
     }
 })
 
@@ -49,8 +24,7 @@ gsap.from(".projects h1", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".projects h1",
-    start: "top 60%",
-    markers: true
+    start: "top 60%"
   }
 })
 
@@ -61,8 +35,7 @@ gsap.from(".project", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".project",
-    start: "top 60%",
-    markers: true
+    start: "top 60%"
   }
 })
 
@@ -72,8 +45,7 @@ gsap.from(".icon-2", {
   stagger: .8,
   opacity: 0,
   scrollTrigger: {
-    trigger: ".icon-2",
-    markers: true
+    trigger: ".icon-2"
   }
 })
 
